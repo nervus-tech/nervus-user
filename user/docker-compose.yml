@@ -3,7 +3,7 @@ services:
   user:
     image: nervus-tech/nervus-user:latest
     ports:
-      - "8082:8080"
+      - "8105:8080"
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/nervus
       - SPRING_DATASOURCE_USERNAME=nervus_user

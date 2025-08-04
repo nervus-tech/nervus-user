@@ -22,7 +22,7 @@ public class DataInitializer implements CommandLineRunner {
             User user2 = new User(2L, "John", "Smith", "instructor");
             userRepository.save(user1);
             userRepository.save(user2);
-            System.out.println("Seeded 2 users into users.users");
+            System.out.println("Seeded 2 users into user service");
         } else {
             System.out.println("Users already seeded, skipping...");
         }

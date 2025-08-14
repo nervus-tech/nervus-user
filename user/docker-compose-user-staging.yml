@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  app:
+    extends:
+      file: docker-compose-user-base.yml
+      service: app
+    container_name: user-staging
+    ports:
+      - "8106:8080"
+    environment:
+      - HIBERNATE_DEFAULT_SCHEMA=staging_users
+      - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://eureka:8761/eureka/
+      - TAG=v1.1.0-staging
+    networks:
+      - nervus-infrastructure_default
+
+networks:
+  nervus-infrastructure_default:
+    external: true
